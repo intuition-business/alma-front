@@ -1,0 +1,247 @@
+.platform.sticky-header {
+  transition: all 0.3s;
+  top: -37px;
+}
+.platform .sticky-header .headerContain {
+  background: white;
+}
+@media (max-width: 768px) {
+  .platform .sticky-header {
+    top: -33px;
+  }
+}
+
+.platform ul {
+  padding: 7px 7px;
+}
+
+.platform .menu-btn.close div:nth-child(1) {
+  transform: rotate(45deg) translateY(5px) translateX(5px);
+  background: black;
+}
+.platform .menu-btn.close div:nth-child(2) {
+  opacity: 0;
+}
+.platform .menu-btn.close div:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px) translateX(6px);
+  background: black;
+}
+@media (max-width: 500px) {
+  .platform  .menu-btn.close div {
+    background: #000000;
+  }
+}
+
+@media (min-width: 1200px) {
+  .platform  .menu-btn {
+    display: none !important;
+  }
+}
+
+.platform nav .nav_links {
+  display: flex;
+  gap: 70px;
+}
+
+.platform nav .nav_links .mobile-menu {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item {
+  color: #5B5B5B;
+  padding: 7px 10px;
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item svg{
+  margin-right: 5px;
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children:hover > button:after,
+.platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children.active > button:after {
+  opacity: 1;
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu {
+  transition: all 0.3s;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu li {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 54px;
+  position: relative;
+  padding-left: 60px;
+  counter-increment: item;
+}
+
+.platform header nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu li::before {
+  content: counter(item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.platform header nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu.show-submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  background: #000;
+  width: 100%;
+  left: 0;
+  border-radius: 0 0 20px 20px;
+  padding: 133px 116px 62px 116px;
+  top: 70px;
+  z-index: -123;
+  animation: slideDown 0.4s ease forwards;
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu.show-submenu::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  width: 286px;
+  height: 241px;
+  background-image: url('https://intuitionstudio.co/alma/wp-content/uploads/2025/04/Rectangle-96.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  z-index: -1;
+}
+@media (max-width: 768px) {
+  .platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu.show-submenu::after {
+    display: none;
+  }
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu.show-submenu::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  width: 350px;
+  height: 350px;
+  background-image: url('media/images/Mask-header-1.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 30px;
+}
+@media (max-width: 768px) {
+  .platform nav .nav_links .mobile-menu > .menu-item.menu-item-has-children > .sub-menu.show-submenu::before {
+    display: none;
+  }
+}
+
+.platform nav .nav_links .mobile-menu > .menu-item:hover,
+.platform nav .nav_links .mobile-menu > .menu-item:active {
+  color: black;
+}
+
+.platform nav .nav_links .mobile-menu ul {
+  list-style: none;
+}
+
+.platform .current_page_item {
+  position: relative;
+  font-weight: 500 !important;
+  background: #0096FB;
+  border-radius: 7px;
+  color: white !important;
+  padding: 4px;
+}
+
+.platform .current_page_item svg {
+  stroke: white;
+}
+
+
+.platform .current_page_item::before {
+  display: none;
+}
+
+.platform .mobile-menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media (min-width: 1450px) {
+  .platform .mobile-menu {
+    gap: 33px;
+  }
+}
+@media (max-width: 1200px) {
+  .platform .mobile-menu {
+    position: fixed;
+    padding: 25px;
+    height: 100%;
+    width: 380px;
+    right: 0;
+    transform: translateX(100%);
+    top: 0;
+    gap: 0 !important;
+    flex-direction: column;
+    transition: all 0.3s;
+    align-items: flex-start;
+    overflow: auto;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 185px;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+  .platform .mobile-menu.show-menu {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 500px) {
+  .platform .mobile-menu {
+    width: 100%;
+    top: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+}
+
+.platform .mobile-menu .active {
+  position: relative;
+  color: black;
+  font-weight: 600;
+}
+@media (max-width: 1300px) {
+  .platform .mobile-menu .active {
+    background: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .platform .mobile-menu .active:before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .platform .mobile-menu .active {
+    text-align: start;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
