@@ -245,3 +245,23 @@
     transform: translateY(0);
   }
 }
+
+
+/* .loginPc{
+  display: flex;
+}
+
+.loginMobile{
+  display: none;
+}
+
+@media(max-width:1200px){
+  .loginPc{
+    display: none;
+  }
+
+  .loginMobile{
+    display: flex;
+  }
+  
+} */

@@ -1,3 +1,127 @@
 .archivo{
   height: 150px;
 }
+
+.projectsGrid{
+  grid-template-columns: repeat(8, calc(12.5% - 15px));
+  grid-gap: 15px;
+}
+
+.filegrid{
+  grid-template-columns: repeat(7, calc(14.2% - 15px));
+  grid-gap: 15px;
+}
+
+.asignar{
+  grid-template-columns: repeat(2, calc(50% - 15px));
+  grid-gap: 15px;
+}
+
+@media(max-width:1200px){
+  .filegrid{
+    grid-template-columns: repeat(3, calc(33.33% - 15px));
+    grid-gap: 15px;
+  }
+
+  .projectsGrid{
+    grid-template-columns: repeat(3, calc(33.33% - 15px));
+    grid-gap: 15px;
+  }
+
+  .asignar{
+    grid-template-columns: repeat(1, calc(100% - 15px));
+    grid-gap: 15px;
+  }
+}
+
+@media(max-width:578px){
+  .filegrid{
+    grid-template-columns: repeat(1, calc(100% - 15px));
+    grid-gap: 15px;
+  }
+
+  .projectsGrid{
+    grid-template-columns: repeat(2, calc(50% - 15px));
+    grid-gap: 15px;
+  }
+}
+
+[modal-backdrop] {
+  z-index: 20;
+  /* display: none !important; */
+}
+
+#authentication-modal{
+  z-index: 99 !important;
+}
+
+.tag-card {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 120px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.2s ease;
+  text-align: center;
+}
+
+.tag-card input[type="checkbox"] {
+  display: none;
+}
+
+.tag-card input[type="checkbox"]:checked + .content {
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.tag-card .content {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.tag-card input[type="checkbox"]:checked + .content {
+  background: white;
+  border-color: #2196F3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.tag-card .image {
+  /* aspect-ratio: 1 / 1; */
+  height: 100px;
+  width: fit-content;
+}
+
+.tag-card .label {
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.tag-card .checkmark {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-card input[type="checkbox"]:checked ~ .checkmark {
+  display: flex;
+  background-color: #2196F3;
+  color: white;
+}
+
+.tag-card .checkmark svg {
+  width: 14px;
+  height: 14px;
+}
